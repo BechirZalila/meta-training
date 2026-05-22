@@ -8,12 +8,14 @@ SRC_URI = "file://skeleton.service \
 	   file://skeleton_test.c \
 	   file://COPYRIGHT \
 	   "
-
 inherit systemd
 
 NATIVE_SYSTEMD_SUPPORT = "1"
-SYSTEMD_PACKAGES = "${PN}"
+SYSTEMD_PACKAGES = "${PN}" 
 SYSTEMD_SERVICE:${PN} = "skeleton.service"
+#SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+
+S = "${WORKDIR}"
 
 do_compile () {
 	${CC} ${CFLAGS} ${LDFLAGS} ${WORKDIR}/skeleton_test.c -o ${WORKDIR}/skeleton-test
@@ -33,5 +35,4 @@ do_install () {
 }
 
 CONFFILES:${PN} += "${base_libdir}/systemd/system/skeleton.service"
-
 FILES:${PN} += "${base_libdir}/systemd"

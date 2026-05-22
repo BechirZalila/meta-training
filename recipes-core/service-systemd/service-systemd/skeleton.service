@@ -3,9 +3,8 @@ Description=Charge le service skeleton-test
 
 [Service]
 ExecStart=/usr/sbin/skeleton-test
-
 KillMode=process
-# A cause du fait que le programme skeleton-test appelle dameon()
+# Due to the use of dameon
 
 [Install]
 WantedBy=multi-user.target

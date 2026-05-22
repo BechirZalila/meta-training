@@ -7,13 +7,15 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYRIGHT;md5=349c872e0066155e1818b7869388
 inherit update-rc.d
 
 INITSCRIPT_NAME = "skeleton"
-INITSCRIPT_PACKAGES = "${PN}"
+INITSCRIPT_PACKAGES = "${PN}"                                                   
 INITSCRIPT_PARAMS = "start 99 5 2 . stop 20 0 1 6 ."
 
 SRC_URI = "file://skeleton \
 	   file://skeleton_test.c \
 	   file://COPYRIGHT \
 	   "
+
+S = "${WORKDIR}"
 
 do_compile () {
 	${CC} ${CFLAGS} ${LDFLAGS} ${WORKDIR}/skeleton_test.c -o ${WORKDIR}/skeleton-test

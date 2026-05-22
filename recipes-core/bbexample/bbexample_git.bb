@@ -10,10 +10,11 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=96af5705d6f64a88e035781ef00e98a8"
 SRC_URI = "git://github.com/BechirZalila/bbexample.git;protocol=https;branch=master"
 
 # Modify these as desired
-PV = "0.1+git${SRCPV}"
+PV = "0.1+git"
 SRCREV = "b9fb7785e9e1f357f29bef63dce8f1d91adb6170"
 
 S = "${WORKDIR}/git"
+
 
 # NOTE: if this software is not capable of being built in a separate build directory
 # from the source, you should replace autotools with autotools-brokensep in the

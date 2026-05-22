@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=9273579e85f231c463bf432ce84c2479"
 SRC_URI = "git://github.com/BechirZalila/this_is.git;protocol=https;branch=master"
 
 # Modify these as desired
-PV = "1.0+git${SRCPV}"
+PV = "1.0+git"
 SRCREV = "99881898113cf78f5a986e8960fda9a3896c302e"
 
 S = "${WORKDIR}/git"
