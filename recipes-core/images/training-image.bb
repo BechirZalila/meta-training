@@ -1,6 +1,6 @@
 require recipes-core/images/core-image-minimal.bb                               
 
-DESCRIPTION = "Image personnalisée pour la formation"
+DESCRIPTION = "Custom image for the training"
 LICENSE = "MIT"
 
 SKELSERVICE = "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'service-systemd', 'service-sysvinit', d)}"

@@ -1,5 +1,5 @@
-SUMMARY = "Exemple de recette qui hérite de la classe useradd"
-DESCRIPTION = "Création d'un nouevel utilisateur user avec son dossier personne"
+SUMMARY = "Example recipe that inherits the useradd class"
+DESCRIPTION = "Creates a user account named 'user' with its home directory"
 LICENSE = "MIT"
 PR = "r1"
 
@@ -9,8 +9,8 @@ inherit useradd
 
 USERADD_PACKAGES = "${PN}"
 
-# Crée un nouvel utilisateur "user" avec /home/user comme dossier personnel
-# et /bin/sh comme shell par défaut
+# Create a new user "user" with /home/user as home directory
+# and /bin/sh as default shell
 USERADD_PARAM:${PN} = "-u 1000 -d /home/user -r -s /bin/sh user"
 
 do_install () {
