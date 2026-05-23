@@ -4,7 +4,7 @@ DESCRIPTION = "Custom image for the training"
 LICENSE = "MIT"
 
 SKELSERVICE = "${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'service-systemd', 'service-sysvinit', d)}"
-CORE_IMAGE_EXTRA_INSTALL = "bbexample thisis libanswer newuser ${SKELSERVICE}"
+CORE_IMAGE_EXTRA_INSTALL = "bbexample thisis libanswer newuser ${SKELSERVICE} hello-mod"
 
 inherit extrausers                                                              
 
