@@ -1,9 +1,10 @@
 [Unit]
-Description=Charge le service skeleton-test
+Description=Loads the skeleton-service service
 
 [Service]
 ExecStart=/usr/sbin/skeleton-test
-KillMode=process
+Type=forking
+KillMode=mixed
 # Due to the use of dameon
 
 [Install]
